@@ -67,6 +67,75 @@
                 </StackLayout>
             </Grid>
         </ContentView>
+
+        <CollectionView Grid.Column="0" Grid.Row="1"
+                        BackgroundColor="#E5E5E5"
+                        ItemsSource="{Binding Items}">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" 
+                                 Span="2" 
+                                 VerticalItemSpacing="0"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10" 
+                          BackgroundColor="#ffffff" 
+                          RowSpacing="0" 
+                          ColumnSpacing="0">
+                        
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="35"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="30"/>
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.Column="0" Grid.Row="0"
+                               Grid.ColumnSpan="2"
+                               Source="{Binding Image}"/>
+                        <Label Grid.Column="0" Grid.Row="1"
+                               Grid.ColumnSpan="2"
+                               FontSize="16"
+                               Margin="15,5,0,0"
+                               TextColor="#000000"
+                               FontAttributes="Bold"
+                               Text="{Binding Name}"/>
+                        <ImageButton Grid.Column="0" Grid.Row="2"
+                               HorizontalOptions="Start"
+                               VerticalOptions="Start"
+                               BackgroundColor="Transparent"
+                               WidthRequest="18"
+                               HeightRequest="19"
+                               Margin="15,0,0,0"
+                               Source="{Binding LockImage}"
+                               Command="{Binding LockClickCommand}"/>
+                        <Label Grid.Column="1" Grid.Row="2"
+                               HorizontalOptions="End"
+                               VerticalOptions="Start"
+                               TextDecorations="Strikethrough"
+                               TextColor="#000000"
+                               FontSize="15"
+                               Opacity="0.5"
+                               Margin="0,0,15,0"
+                               Text="{Binding OldPrice}"/>
+                        <Image Grid.Column="0" Grid.Row="3"
+                               Margin="15,0,0,0"
+                               Source="Stars.png"/>
+                        <Label Grid.Column="1" Grid.Row="3"
+                               HorizontalOptions="End"
+                               VerticalOptions="Start"
+                               TextColor="#000000"
+                               FontSize="24"
+                               Margin="0,0,15,0"
+                               Text="{Binding Price}"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </Grid>
     
 </ContentPage>

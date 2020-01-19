@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin_Forms_Task_2.ViewModel;
 
 namespace Xamarin_Forms_Task_2
 {
@@ -15,6 +16,7 @@ namespace Xamarin_Forms_Task_2
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+            BindingContext = new MainPageVM(Navigation);
         }
     }
 }
