@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Xamarin_Forms_Task_2.MainPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        
+        <ContentView Grid.Column="0" Grid.Row="0"
+                     BackgroundColor="#181831">
+            <Grid Padding="12,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <ImageButton Grid.Column="0" Grid.Row="0"          
+                             HeightRequest="18"
+                             WidthRequest="24"
+                             HorizontalOptions="Start"
+                             BackgroundColor="Transparent"
+                             Source="MenuButton.png"/>
+                
+                <ImageButton Grid.Column="1" Grid.Row="0"
+                             BackgroundColor="Transparent"
+                             Source="LogoPalmyShop.png"/>
+                
+                <ImageButton Grid.Column="2" Grid.Row="0"
+                             HeightRequest="29"
+                             WidthRequest="24"
+                             HorizontalOptions="End"
+                             BackgroundColor="Transparent"
+                             Source="ShopBusket.png"/>
+
+                <Label Grid.Column="0" Grid.Row="1"
+                       Grid.ColumnSpan="2"
+                       Text="Catalog"
+                       TextColor="#ffffff"
+                       FontSize="26"
+                       Margin="0,4,50,0"
+                       HorizontalOptions="End"/>
+
+                <StackLayout Grid.Column="2" Grid.Row="1"
+                             Orientation="Horizontal"
+                             HorizontalOptions="EndAndExpand"
+                             Spacing="10">
+                    <ImageButton Source="CatalogViewButton1.png"
+                                 BackgroundColor="Transparent"/>
+                    <ImageButton Source="CatalogViewButton2.png"
+                                 BackgroundColor="Transparent"/>
+                    <ImageButton Source="CatalogViewButton3.png"
+                                 BackgroundColor="Transparent"/>
+                </StackLayout>
+            </Grid>
+        </ContentView>
+    </Grid>
+    
+</ContentPage>
