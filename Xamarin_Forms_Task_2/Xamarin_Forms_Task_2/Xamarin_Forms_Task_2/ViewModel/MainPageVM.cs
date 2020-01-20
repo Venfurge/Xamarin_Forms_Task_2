@@ -52,7 +52,7 @@ namespace Xamarin_Forms_Task_2.ViewModel
             get => Item.LockImage;
             set
             {
-                Item.Name = value;
+                Item.LockImage = value;
                 OnPropertyChanged("LockImage");
             }
         }
@@ -74,12 +74,13 @@ namespace Xamarin_Forms_Task_2.ViewModel
                 OnPropertyChanged("Price");
             }
         }
-        private void LockClick()
+        private void LockClick(object sender)
         {
-            if (LockImage == "FullLock")
-                LockImage = "EmptyLock";
+            Item = sender as Item;
+            if (LockImage == "FullLock.png")
+                LockImage = "EmptyLock.png";
             else
-                LockImage = "FullLock";
+                LockImage = "FullLock.png";
         }
     }
 }

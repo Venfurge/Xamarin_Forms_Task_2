@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Xamarin_Forms_Task_2.MainPage">
+             x:Class="Xamarin_Forms_Task_2.MainPage"
+             x:Name="Page">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -112,7 +113,8 @@
                                HeightRequest="19"
                                Margin="15,0,0,0"
                                Source="{Binding LockImage}"
-                               Command="{Binding LockClickCommand}"/>
+                               Command="{Binding Source={x:Reference Page}, Path=BindingContext.LockClickCommand}"
+                               CommandParameter="{Binding .}"/>
                         <Label Grid.Column="1" Grid.Row="2"
                                HorizontalOptions="End"
                                VerticalOptions="Start"
