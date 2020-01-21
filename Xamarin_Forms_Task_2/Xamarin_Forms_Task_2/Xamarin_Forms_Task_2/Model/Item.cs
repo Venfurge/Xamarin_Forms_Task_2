@@ -8,6 +8,17 @@ namespace Xamarin_Forms_Task_2.Model
     {
         private string _image, _name, _lockImage;
         private int _price, _oldPrice;
+        public Item(string Image, string Name, string LockImage, int Price, int OldPrice)
+        {
+            this.Image = Image;
+            this.Name = Name;
+            this.LockImage = LockImage;
+            this.Price = Price;
+            this.OldPrice = OldPrice;
+        }
+        public Item()
+            : this("", "", "", 0, 0)
+        { }
         public string Image
         {
             get => _image;
@@ -48,16 +59,5 @@ namespace Xamarin_Forms_Task_2.Model
                 _oldPrice = value;
             }
         }
-        public Item(string Image, string Name, string LockImage, int Price, int OldPrice)
-        {
-            this.Image = Image;
-            this.Name = Name;
-            this.LockImage = LockImage;
-            this.Price = Price;
-            this.OldPrice = OldPrice;
-        }
-        public Item()
-            : this("", "", "", 0, 0)
-        { }
     }
 }

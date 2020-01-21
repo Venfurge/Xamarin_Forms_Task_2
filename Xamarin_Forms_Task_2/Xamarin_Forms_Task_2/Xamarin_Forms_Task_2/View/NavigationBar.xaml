@@ -48,11 +48,17 @@
                              Orientation="Horizontal"
                              HorizontalOptions="EndAndExpand"
                              Spacing="10">
-                    <ImageButton Source="CatalogViewButton1"
+                    <ImageButton Source="{Binding NavBarButton1}"
+                                 Command="{Binding NavBarButtonCommand}"
+                                 CommandParameter="1"
                                  BackgroundColor="Transparent"/>
-                    <ImageButton Source="CatalogViewButton2"
+                    <ImageButton Source="{Binding NavBarButton2}"
+                                 Command="{Binding NavBarButtonCommand}"
+                                 CommandParameter="2"
                                  BackgroundColor="Transparent"/>
-                    <ImageButton Source="CatalogSelectedButton3"
+                    <ImageButton Source="{Binding NavBarButton3}"
+                                 Command="{Binding NavBarButtonCommand}"
+                                 CommandParameter="3"
                                  BackgroundColor="Transparent"/>
                 </StackLayout>
             </Grid>

@@ -16,6 +16,7 @@ namespace Xamarin_Forms_Task_2.View
         public NavigationBar()
         {
             InitializeComponent();
+            BindingContext = new NavigationBarVM(Navigation);
         }
     }
 }
