@@ -21,7 +21,7 @@ namespace Xamarin_Forms_Task_2.ViewModel
         public ICommand LockClickCommand { get; set; }
         public MainPageVM(INavigation navigation)
         {
-            Navigation = navigation;
+            Navigation = navigation;    
             Items = new ObservableCollection<ItemVM>();
             Items.Add(new ItemVM("Image1.jpg", "Something asdgasdg asdg asdg asdg ag ads asdgsadgasdg", "EmptyLock.png", 125, null));
             Items.Add(new ItemVM("Image2.jpg", "Something Stupid", "EmptyLock.png", 125, 98));

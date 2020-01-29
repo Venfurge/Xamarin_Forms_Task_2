@@ -6,6 +6,22 @@
              mc:Ignorable="d"
              x:Class="Xamarin_Forms_Task_2.App">
     <Application.Resources>
+        
+        <!--Fonts-->
+        
+        <OnPlatform x:TypeArguments="x:String" x:Key="OpenSansBold">
+            <On Platform="Android" Value="OpenSans-Bold.ttf#OpenSans" />
+        </OnPlatform>
+        <OnPlatform x:TypeArguments="x:String" x:Key="OpenSansRegular">
+            <On Platform="Android" Value="OpenSans-Regular.ttf#OpenSans" />
+        </OnPlatform>
 
+        <!--Styles-->
+        
+        <Style x:Key="NavBarButtonStyle" TargetType="Button">
+            <Setter Property="WidthRequest" Value="25"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="Command" Value="{Binding NavBarButtonCommand}"/>
+        </Style>
     </Application.Resources>
 </Application>

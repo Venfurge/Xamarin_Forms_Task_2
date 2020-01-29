@@ -17,7 +17,8 @@
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
 
-        <local:NavigationBar Grid.Column="0" Grid.Row="0" BackgroundColor="#181831"/>
+        <local:NavigationBar Grid.Column="0" Grid.Row="0" 
+                             BackgroundColor="#181831"/>
 
         <CollectionView Grid.Column="0" Grid.Row="1"
                         BackgroundColor="#E5E5E5"
@@ -53,7 +54,9 @@
                                  CornerRadius="3"/>
 
                         <Grid Grid.Column="0" Grid.Row="1"
-                              BackgroundColor="#ffffff" Margin="1">
+                              BackgroundColor="#ffffff" 
+                              Margin="1"
+                              x:Name="adklghasl">
 
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
@@ -69,7 +72,7 @@
                                Grid.ColumnSpan="2"
                                FontSize="14"
                                TextColor="#000000"
-                               FontFamily="OpenSans-Bold.ttf#OpenSans"
+                               FontFamily="{StaticResource OpenSansBold}"
                                Margin="5,3,0,0"
                                LineBreakMode="TailTruncation"
                                MaxLines="2"
@@ -91,7 +94,7 @@
                                TextDecorations="Strikethrough"
                                TextColor="#000000"
                                FontSize="15"
-                               FontFamily="OpenSans-Regular.ttf#OpenSans"
+                               FontFamily="{StaticResource OpenSansRegular}"
                                Opacity="0.5"
                                Margin="0,0,5,0"                                   
                                Text="{Binding OldPrice}"/>
@@ -106,7 +109,7 @@
                                TextColor="#000000"
                                FontSize="24"
                                Margin="0,-5,5,0"
-                               FontFamily="OpenSans-Bold.ttf#OpenSans"
+                               FontFamily="{StaticResource OpenSansBold}"
                                Text="{Binding Price, StringFormat='${0}'}"/>
                         </Grid>
                     </Grid>
