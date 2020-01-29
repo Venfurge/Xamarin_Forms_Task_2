@@ -8,7 +8,7 @@
              x:Class="Xamarin_Forms_Task_2.MainPage"
              x:Name="Page">
 
-    <Grid>
+    <Grid x:Name="outerGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
@@ -61,7 +61,7 @@
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="40"/>
-                                <RowDefinition Height="18"/>
+                                <RowDefinition Height="22"/>
                                 <RowDefinition Height="30"/>
                             </Grid.RowDefinitions>
 
@@ -75,14 +75,14 @@
                                MaxLines="2"
                                Text="{Binding Name}">
                             </Label>
-                            <ImageButton Grid.Column="0" Grid.Row="1"
+                            <Button Grid.Column="0" Grid.Row="1"
                                HorizontalOptions="Start"
                                VerticalOptions="Start"
                                BackgroundColor="Transparent"
-                               WidthRequest="18"
-                               HeightRequest="19"
-                               Margin="5,0,0,0"
-                               Source="{Binding LockImage}"
+                               WidthRequest="19"
+                               HeightRequest="22"
+                               Margin="7,0,0,0"
+                               ImageSource="{Binding LockImage}"
                                Command="{Binding Source={x:Reference Page}, Path=BindingContext.LockClickCommand}"
                                CommandParameter="{Binding .}"/>
                             <Label Grid.Column="1" Grid.Row="1"
@@ -97,6 +97,8 @@
                                Text="{Binding OldPrice}"/>
                             <Image Grid.Column="0" Grid.Row="2"
                                Margin="5,0,0,0"
+                               WidthRequest="70"
+                               HeightRequest="13"
                                Source="Stars.png"/>
                             <Label Grid.Column="1" Grid.Row="2"
                                HorizontalOptions="End"
