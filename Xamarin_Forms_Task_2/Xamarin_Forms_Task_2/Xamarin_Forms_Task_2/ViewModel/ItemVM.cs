@@ -12,14 +12,14 @@ namespace Xamarin_Forms_Task_2.ViewModel
         public void OnPropertyChanged(string prop = "")
            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
         private Item Item { get; set; }
-        public ItemVM(string Image, string Name, string LockImage, int Price, int OldPrice)
+        public ItemVM(string Image, string Name, string LockImage, int Price, int? OldPrice)
         {
             Item = new Item();
             this.Image = Image;
             this.Name = Name;
             this.LockImage = LockImage;
             this.Price = Price;
-            this.OldPrice = OldPrice;
+            this.OldPrice = OldPrice.ToString() ?? "";
         }
         public ItemVM()
             : this("", "", "", 0, 0)
@@ -51,9 +51,15 @@ namespace Xamarin_Forms_Task_2.ViewModel
                 OnPropertyChanged("LockImage");
             }
         }
-        public int OldPrice
+        public string OldPrice
         {
-            get => Item.OldPrice;
+            get
+            {
+                if (Item.OldPrice == "")
+                    return "";
+                else
+                    return "$" + Item.OldPrice;
+            }
             set
             {
                 Item.OldPrice = value;

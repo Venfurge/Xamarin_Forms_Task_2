@@ -23,10 +23,10 @@ namespace Xamarin_Forms_Task_2.ViewModel
         {
             Navigation = navigation;
             Items = new ObservableCollection<ItemVM>();
-            Items.Add(new ItemVM("Image1.jpg", "Something Cleaver", "EmptyLock.png", 125, 98));
-            Items.Add(new ItemVM("Image2.jpg", "Something Stupid", "FullLock.png", 125, 98));
+            Items.Add(new ItemVM("Image1.jpg", "Something asdgasdg asdg asdg asdg ag ads asdgsadgasdg", "EmptyLock.png", 125, null));
+            Items.Add(new ItemVM("Image2.jpg", "Something Stupid", "EmptyLock.png", 125, 98));
             Items.Add(new ItemVM("Image3.jpg", "Text more Text", "EmptyLock.png", 25, 120));
-            Items.Add(new ItemVM("Image4.jpg", "Hello World", "FullLock.png", 35, 78));
+            Items.Add(new ItemVM("Image4.jpg", "Hello World", "EmptyLock.png", 35, 78));
             LockClickCommand = new Command<ItemVM>(LockClick);
         }      
         private void LockClick(object sender)
